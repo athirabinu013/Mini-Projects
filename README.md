@@ -38,7 +38,7 @@ Mini-Projects/
 
 More projects will be added as I continue learning and developing my skills.
 
-##Learning Philosophy
+## Learning Philosophy
 
 I don't expect every project here to be perfect.
 
