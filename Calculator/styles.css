@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(41, 35, 35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    height: auto;
+    width: 350px;
+    padding: 30px;
+
+    position: relative;
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    border: 5px solid rgba(255, 255, 255, 0.4);
+    border-radius: 25px;
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25),
+        inset 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+/* Moving glass shine */
+.container::before {
+    content: "";
+
+    position: absolute;
+    top: -100%;
+    left: -60%;
+
+    width: 40%;
+    height: 300%;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    transform: rotate(25deg);
+
+    animation: shine 4s infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -60%;
+    }
+
+    50% {
+        left: 150%;
+    }
+
+    100% {
+        left: 150%;
+    }
+}
+
+/* Keep calculator elements above the shine */
+.container > * {
+    position: relative;
+    z-index: 1;
+}
+
+.screen,
+.row0,
+.row1,
+.row2,
+.row3,
+.row4 {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.screen {
+    height: 80px;
+    width: 270px;
+    background-color: aquamarine;
+    color:black;
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+.expression {
+    text-align: left;
+    font-size: 18px;
+}
+
+.answer {
+    text-align: right;
+    font-size: 25px;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+    border-radius: 100%;
+    border: 0.5cqmin solid black;
+    background-color: azure;
+    color: black;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.sign {
+    background-color: rgb(97, 86, 86);
+    color: azure;
+}
+
+.equal {
+    background-color: orangered;
+    color: azure;
+}
