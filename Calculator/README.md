@@ -65,10 +65,11 @@ JavaScript was added to make the calculator interactive and perform calculations
 
 ## Project Structure
 
-```text
 Calculator/
+
 ├── index.html
 ├── styles.css
 ├── script.js
+├── calc_visual.png
+├── calc_func.png
 └── README.md
-```
