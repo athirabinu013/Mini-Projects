@@ -75,7 +75,8 @@ body {
 .row1,
 .row2,
 .row3,
-.row4 {
+.row4,
+.p {
     display: grid;
     grid-template-columns: repeat(4, 60px);
     gap: 10px;
@@ -128,3 +129,14 @@ button {
     background-color: orangered;
     color: azure;
 }
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    height: 40px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0 0 10px white;
+    }
